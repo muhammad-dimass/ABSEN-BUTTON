@@ -80,6 +80,17 @@ class SiswaController extends Controller
   
     }
 
+    public function updateKeterangan(Request $request)
+    {
+        $nis = $request->nis;
+        $keterangan = $request->keterangan;
+
+        $siswa = new Siswa();
+        $siswa->updateKeteranganByNIS($nis, $keterangan);
+
+        // return response()->json(['success' => true]);
+    }
+
     /**
      * Remove the specified resource from storage.
      */

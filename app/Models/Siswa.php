@@ -16,4 +16,16 @@ class Siswa extends Model
         'kelas',
         'keterangan',
     ];
+
+    public function updateKeteranganByNIS($nis, $keterangan)
+    {
+        $siswa = $this->where('nis', $nis)->first();
+
+        if ($siswa) {
+            $siswa->keterangan = $keterangan;
+            $siswa->save();
+        }
+
+        return $siswa;
+    }
 }

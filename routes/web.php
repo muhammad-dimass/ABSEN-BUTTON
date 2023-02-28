@@ -20,8 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('siswa.updateKeterangan', [App\Http\Controllers\SiswaController::class, 'updateKeterangan'])->name('updateKeterangan');
 
 Route::resource('/siswa', App\Http\Controllers\SiswaController::class);
+Route::resource('/absen', App\Http\Controllers\AbsenController::class);
 
 // Route::get('/siswa', [App\Http\Controllers\SiswaController::class, 'index'])->name('siswa');
 // Route::get('/siswa_create', [App\Http\Controllers\SiswaController::class, 'create'])->name('siswa_create');
