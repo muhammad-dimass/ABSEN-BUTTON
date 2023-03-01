@@ -108,7 +108,6 @@
 <body class="g-sidenav-show  bg-gray-100">
 
 
-
 <div class="m-3 mt-7 p-3">
     <center>
 <div class="card col-md-4">
@@ -125,37 +124,26 @@
     </a>
     <div class="row">
   <div class="col-md-12 mt-3">
-  <form  method="POST" action="{{ route('siswa.store') }}">
+  <form  method="POST" action="{{ route('siswa.show') }}">
     @csrf
+  
     <div class="form-group success">
       <input type="text" value="" name="nis" class="form-control form-control-alternative is-valid my-3" />
       <input type="text" value="" name="nama" class="form-control form-control-alternative is-valid my-3"/>
-      <div class="form-group">
-        <select class="form-control is-valid" id="exampleFormControlSelect1" name="kelas">
-      <option>XII RPL 1</option>
-      <option>XII RPL 2</option>
-    </select>
-    </div> 
-    <div class="form-group">
-     <select class="form-control is-valid" id="exampleFormControlSelect1" name="keterangan">
-      <option>hadir</option>
-      <option>izin</option>
-      <option>sakit</option>
-      <option>alpa</option>
-    </select>
-    </div>
+      <input type="text" value="hadir" name="keterangan" class="form-control form-control-alternative is-valid my-3"/>
       <button type="submit" class="btn bg-gradient-success">Absen</button>
     </div>
   </form>
+
+
+  </div>
+    <!-- <p class="card-description mb-4">
+      Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.
+    </p> -->
       </div>
-      <div class="copyright text-center text-sm text-muted text-lg-start">
-    <center>
-        <script> //   document.write(new Date().getFullYear())</script>
-        made with <i class="fa fa-heart"></i> 
-        for a better web.
-        </center>
-    </div>
 </div>
+</center>
+
 </div>
 
 
@@ -164,6 +152,30 @@
 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+    <footer class="footer pt-3  ">
+<div class="container-fluid">
+<div class="row align-items-center justify-content-lg-between">
+<div class="col-lg-12 mb-lg-0 mb-4">
+<div class="copyright text-center text-sm text-muted text-lg-start">
+    <center>
+        <script> //   document.write(new Date().getFullYear())</script>
+        made with <i class="fa fa-heart"></i> 
+        for a better web.
+        </center>
+    </div>
+</div>
+
+<!-- <div class="col-lg-6">
+    <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+        <li class="nav-item">
+            <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
+        </li>
+    </ul>
+</div> -->
+
+</div>
+</div>
+</footer>
 </div>
 </main>
 

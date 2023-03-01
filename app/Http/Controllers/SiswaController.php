@@ -34,7 +34,7 @@ class SiswaController extends Controller
         $request->validate([
             'nis' => 'required',
             'nama' => 'required',
-            'jenis_kelamin' => 'required',
+            // 'jenis_kelamin' => 'required',
             'kelas' => 'required',
             'keterangan' => 'required',
         ]);
@@ -48,9 +48,9 @@ class SiswaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id): Response
+    public function show(Siswa $nis)
     {
-        //
+        return view('absensi.show');
     }
 
     /**
